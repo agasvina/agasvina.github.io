@@ -51,55 +51,37 @@
 
       <div class="col-lg-7" >
 
-       <div class="col-xs-2">
-        <a href="#" class="thumbnail". uib-popover-html="htmlPopover[7]" popover-trigger="'mouseenter'" popover-placement="bottom" style="border-style: none;">
-          <img src="/img/svg/pawprint.svg" alt="...">
-        </a>
-      </div>
-     
-     <div class="col-xs-3">
-       <a href="#" class="thumbnail". uib-popover-html="htmlPopover[0]" popover-trigger="'mouseenter'" popover-placement="bottom" style="border-style: none;">
-         <img src="/img/svg/island.svg" alt="...">
-       </a>
-     </div>
+     <button ng-show="showMenu" href="#" class="thumbnail col-sm-1 btn btn-default" uib-popover-html="htmlPopover[0]" popover-trigger="'mouseenter'" popover-placement="right-top" style="border-style: none;">
+       <img src="/img/svg/pawprint.svg" alt="...">
+     </button>
 
-     <div class="col-xs-2">
-       <a href="http://www.finalfantasyxv.com/" class="thumbnail" style="border-style: none;">
-         <img src="/img/svg/city.svg" alt="...">
-       </a>
-     </div>
-
-     <div class="col-xs-2">
+     <div class="col-sm-3" ng-show="showMenu">
        <a href="#" class="thumbnail". uib-popover-html="htmlPopover[4]" popover-trigger="'mouseenter'" popover-placement="right" style="border-style: none;">
          <img src="/img/svg/airplane.svg" alt="...">
        </a>
      </div>
 
-     <div class="col-xs-2">
-       <a href="#" class="thumbnail". uib-popover-html="htmlPopover[2]" popover-trigger="'mouseenter'" popover-placement="bottom" style="border-style: none;">
+
+     <div class="col-sm-2" ng-show="showMenu"> 
+       <a href="#" class="thumbnail btn btn-default". uib-popover-html="htmlPopover[2]" popover-trigger="'mouseenter'" popover-placement="bottom" style="border-style: none;">
          <img src="/img/svg/arctic.svg" alt="...">
        </a>
      </div>
 
-     <div class="col-xs-2">
-       <a ng-click="hideContact = !hideContact" href="#" class="thumbnail". uib-popover-html="htmlPopover[5]" popover-trigger="'mouseenter'" popover-placement="bottom" style="border-style: none;">
-         <img src="/img/svg/batman.svg" alt="...">
-       </a>
-     </div>
 
-     
-<!--      <div class="col-xs-2">
-       <a href="#" class="thumbnail". uib-popover-html="htmlPopover[4]" popover-trigger="'mouseenter'" popover-placement="right" style="border-style: none;">
-         <img src="/img/svg/forest.svg" class="img-circle" alt="...">
-       </a>
-     </div> -->
-
-
-     <div class="col-xs-3">
-       <a href="#" class="thumbnail" style="border-style: none;" uib-popover-html="htmlPopover[8]" popover-trigger="'mouseenter'">
+     <div class="col-sm-4" ng-show="showMenu">
+       <a href="#" class="thumbnail" style="border-style: none;" uib-popover-html="htmlPopover[7]" popover-trigger="'mouseenter'" popover-placement="top">
          <img src="/img/svg/coffee.svg" alt="...">
        </a>
      </div>
+
+     <div type="button" ng-mobile-click="toogleHide()" href="#" class="thumbnail col-sm-2 btn btn-default" style="border-style: none;">
+        <img src="/img/svg/batman.svg" alt="..." width="100"> <i><b>contact</b></i>
+      </div>
+
+     <a href="http://www.finalfantasyxv.com/" ng-show="showMenu" class="thumbnail btn btn-default col-sm-1" style="border-style: none;">
+       <img src="/img/svg/katana.svg" alt="...">
+     </a>
 
      <div class="col-xs-10">
        <br><br>
@@ -111,17 +93,18 @@
          </ul>
          <br><br><br><br>
        </div>
-       <div ng-show="!hideContact">
+       <div ng-show="!hideContact && showMenu">
+         <br><hr>
          <h3><i><b>“Life would be tragic if it weren't funny...”</b></i></h3>
-         <p><b> ― Stephen Hawking ― </b></p><br><br><hr>
+         <p><b> ― Stephen Hawking ― </b></p><hr>
        </div>
      </div> 
 
       </div>
 
-      <div class ="col-lg-1"></div>
-      <div class ="col-lg-5">
-      <p class="navbar-right"><b><i>Programming Experience</i></b></p><hr>
+      <!-- <div class ="col-lg-1"></div> -->
+      <div class ="col-lg-5" ng-show="showMenu">
+        <p class="navbar-right"><b><i>Programming Experience</i></b></p><hr>
         <nvd3 options="options" data="data" class="with-3d-shadow with-transitions" config="{ 'extended': true }"></nvd3>
       </div>
    </div>

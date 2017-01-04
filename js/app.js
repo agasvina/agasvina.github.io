@@ -2,10 +2,10 @@ var app = angular.module("app",  [
 	'ngResource',
   'ngSanitize',
   'ui.bootstrap',
-	'nvd3'
+	'nvd3',
 ]);
 
-app.controller('main', function($scope, $http, $sce) {
+app.controller('main', function($scope, $http, $sce, $window) {
   $scope.htmlPopover = [
     $sce.trustAsHtml("<img src='/img/art/img0.jpg' width='250'/>"),
     $sce.trustAsHtml("<img src='/img/art/art2.jpg' width='250'/>"),
@@ -19,6 +19,9 @@ app.controller('main', function($scope, $http, $sce) {
   ]
 
   $scope.hideContact = false;
+  $scope.toogleHide = function() {
+     $scope.hideContact = !$scope.hideContact;
+  }
 
   var color = d3.scale.category20()
   $scope.options = {
@@ -54,4 +57,31 @@ app.controller('main', function($scope, $http, $sce) {
       $scope.data = res.data;
     });
 
+  $scope.showMenu = true;
+  if($window.innerWidth <= 786) {
+    $scope.showMenu=false;
+  }
+
+  angular.element($window).bind('resize', function () {
+    console.log($window.innerWidth);
+    if($window.innerWidth <= 786) {
+      $scope.$apply(function(){ 
+       $scope.showMenu = false;
+      });
+    } else {
+      $scope.$apply(function(){ 
+        $scope.showMenu = true;
+      });
+    }
+  });
 });
+
+app.directive("ngMobileClick", [function () {
+    return function (scope, elem, attrs) {
+        elem.bind("touchstart click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            scope.$apply(attrs["ngMobileClick"]);
+        });
+    }
+}])
