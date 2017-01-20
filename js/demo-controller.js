@@ -251,7 +251,7 @@ angular.module('ngTimelineDemoApp')
           },
           {
                 'media': {
-                  'url': 'img/timeline/timeline-12.jpg',
+                  'url': 'https://www.youtube.com/watch?v=uVIKkcBef2Q',
                   'caption': '',
                   'credit': ''
                 },
@@ -267,7 +267,7 @@ angular.module('ngTimelineDemoApp')
             },
             {
                   'media': {
-                    'url': 'img/timeline/timeline-13.jpg',
+                    'url': 'https://www.youtube.com/watch?v=KmgR4JiYmPY',
                     'caption': '',
                     'credit': ''
                   },
