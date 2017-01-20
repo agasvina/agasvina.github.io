@@ -15,7 +15,7 @@ else:
     from urllib import parse
     import socketserver
 
-PORT = 8000
+PORT = 8080
 INDEXFILE = 'index.html'
 
 
