@@ -313,6 +313,108 @@ angular.module('ngTimelineDemoApp')
                       'text': "<p>in the University of St. Andrews <b>again....</b></p>"
                     },
                 },
+                {
+                      'media': {
+                        'url': '',
+                        'caption': '',
+                        'credit': ''
+                      },
+                      'start_date': {
+                        'year': '2016',
+                        'month': '02',
+                        'day': '24'
+                      },
+                      'text': {
+                        'headline': "Publication: Model checking cancer automata",
+                        'text': "<p>J.K.F. Bowles and A. Silvina. Model checking cancer automata. In IEEE, BHI-2016 International Conference on Biomedical and Health Informatics, Las Vegas, United States, 24-27 February 2016.</b></p>"
+                      },
+                  },
+                  {
+                        'media': {
+                          'url': 'img/timeline/timeline-09.jpg',
+                          'caption': '',
+                          'credit': ''
+                        },
+                        'start_date': {
+                          'year': '2015',
+                          'month': '07',
+                          'day': '01'
+                        },
+                        'text': {
+                          'headline': "Best 2nd Year Project DESEM Summer School 2015",
+                          'text': "<p>Project title: Cancer Automata Models</p>"
+                        },
+                    },
+                    {
+                          'media': {
+                            'url': 'img/timeline/timeline-09.jpg',
+                            'caption': '',
+                            'credit': ''
+                          },
+                          'start_date': {
+                            'year': '2014',
+                            'month': '01',
+                            'day': '01'
+                          },
+                          'end_date': {
+                            'year': '2015',
+                            'month': '01',
+                            'day': '01'
+                          },
+                          'text': {
+                            'headline': "Scolarship: European Commission’s EACEA",
+                            'text': "<p>Received one year scholarship for Erasmus Mundus MSc in Dependable Software System</p>"
+                          },
+                      }, {
+                          'media': {
+                            'url': 'img/timeline/timeline-09.jpg',
+                            'caption': '',
+                            'credit': ''
+                          },
+                          'start_date': {
+                            'year': '2015',
+                            'month': '09',
+                            'day': '01'
+                          },
+                          'text': {
+                            'headline': "Computer Science Intern",
+                            'text': "<p>Became an intern in University of St. Aandrews.</p>" +
+                            "<p>Relevant-technology: <b>Java, antlr, AngularJS</b></p>"
+                          },
+                      },
+                      {
+                        'media': {
+                          'url': 'img/timeline/timeline-16.jpeg',
+                          'caption': '',
+                          'credit': ''
+                        },
+                        'start_date': {
+                          'year': '2017',
+                          'month': '01',
+                          'day': '09'
+                        },
+                        'text': {
+                          'headline': "Start Practicing Iaido",
+                          'text': "<p>Joined the Genbukan Edinburgh Iaido Dojo</p>"
+                        },
+                    },
+                        {
+                          'media': {
+                            'url': 'img/timeline/timeline-17.png',
+                            'caption': '',
+                            'credit': ''
+                          },
+                          'start_date': {
+                            'year': '2016',
+                            'month': '03',
+                            'day': '01'
+                          },
+                          'text': {
+                            'headline': "Presenter for FED@IBM",
+                            'text': "<p>Gave an hour presentation on introduction to <b>GraphQL-React-Redux</b></p>"
+                          },
+                      },
+
         ]
       };
 
