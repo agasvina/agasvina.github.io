@@ -1,132 +1,37 @@
-
 <!DOCTYPE html>
-<html ng-app="app">
+<html lang="en" ng-app="ngTimelineDemoApp" class="no-js"> <!--<![endif]-->
 <head>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<title>Luca</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js'></script>
-	<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-resource.min.js'></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.3/nv.d3.min.css"/> 
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.18.0/vis.min.css" rel="stylesheet" type="text/css"/>   
+  <title>Angular TimelineJS V3 Demo</title>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.3/nv.d3.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-nvd3/1.0.7/angular-nvd3.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.18.0/vis.min.js"></script>
+  <meta name="description" content="demo app for angular-timeline">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js"></script>
-    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.4.0.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-	<script src="/js/app.js"></script>
-	<style type="text/css">
-		img:hover {
-		    opacity: 0.5;
-	</style>
+  <!-- CDN version -->
+  <link rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+  <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+
+  <link rel="stylesheet" href="demo.css">
+
 </head>
 <body>
 
-  <div>
-    <div class="row center" style="margin-left: 20px; margin-right: 40px;">
+<div ng-view=""></div>
 
-    <div class="jumbotron">
-    <div class="col-lg-2">
-        <img ng-click="resetting()" class="img-circle" src="img/agas.jpg" alt="Generic placeholder image" width="140" height="140">
-     </div>
-     <div class="col-lg-9">
-     <h3><i>(Lucia)</i> <b>Agastya Silvina</b></h3>
-     <div class="col-lg-10">
-     <p>Proud Sister. Student. Learner. <b>Devoted gamer</b>. Happy-go-lucky person. Subtly charming web practitioner. Hipster-friendly Software Engineer.</p>
-     </div>      
-     </div>
-     <hr>
-
-   </div>
-   </div>
-   <div class="col-md-11" ng-controller="main"
-   style="margin-left: 50px; margin-top: 20px; margin-right: 70px">
-
-   <div class="pull-right"><p><i>the story of my life...</i></div>
-   <hr>
-   <div vis-timeline items="{{items}}" option="{{visOption}}" showTimeline="{{showTimeline}}" evturl="evturl" evttitle="evttitle" evtcontext="evtcontext"></div></p><hr>
-
-      <div class="col-lg-5 pull-right" >
-      <br><br>
-
-     <button ng-show="showMenu" href="#" class="thumbnail col-sm-1 btn btn-default" uib-popover-html="htmlPopover[0]" popover-trigger="'mouseenter'" popover-placement="top" style="border-style: none;">
-       <img src="/img/svg/pawprint.svg" alt="...">
-     </button>
-
-     <div class="col-sm-3" ng-show="showMenu">
-       <a href="#" class="thumbnail". uib-popover-html="htmlPopover[4]" popover-trigger="'mouseenter'" popover-placement="right" style="border-style: none;">
-         <img src="/img/svg/airplane.svg" alt="...">
-       </a>
-     </div>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src='//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-resource.min.js'></script>
+<script src='//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js'></script>
 
 
-     <div class="col-sm-2" ng-show="showMenu"> 
-       <a href="#" class="thumbnail btn btn-default". uib-popover-html="htmlPopover[2]" popover-trigger="'mouseenter'" popover-placement="top" style="border-style: none;">
-         <img src="/img/svg/arctic.svg" alt="...">
-       </a>
-     </div>
+<script src="/js/ng-timeline.js"></script>
 
-
-     <div class="col-sm-4" ng-show="showMenu">
-       <a href="#" class="thumbnail" style="border-style: none;" uib-popover-html="htmlPopover[7]" popover-trigger="'mouseenter'" popover-placement="top">
-         <img src="/img/svg/coffee.svg" alt="...">
-       </a>
-     </div>
-
-     <div type="button" ng-mobile-click="toogleHide()" href="#" class="thumbnail col-sm-2 btn btn-default" style="border-style: none;">
-        <img src="/img/svg/batman.svg" alt="..." width="100"> <i><b>contact</b></i>
-      </div>
-
-     <a href="https://github.com/agasvina" ng-show="showMenu" class="thumbnail btn btn-default col-sm-1" style="border-style: none;">
-       <img src="/img/Octocat.png" alt="...">
-     </a>
-
-      </div>
-
-      <div>
-        <div class="text-center" ng-show="hideContact">
-        <br><br>
-          <h4><strong>Contact</strong></h4>
-          <p>School of Computer Science, Jack Cole Building, North Haugh, St Andrews KY16 9SX Scotland</p>
-          <ul class="list-unstyled">
-            <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>  <a href="mailto:as362@st-andrews.ac.uk">Personal Email</a></li>
-          </ul>
-          <br><br><br><br>
-        </div>
-      </div> 
-
-      <div ng-show="!hideContact && showMenu">
-      <span ng-show="showTimeline">
-      <div class="col-lg-2">
-          <img src="{{evturl}}" alt="Generic placeholder image" width="140" height="140">
-       </div>
-       <div class="col-lg-5">
-       <h3>{{evttitle}}</h3>
-       <span ng-bind-html="evtcontext"></span>
-       </div> 
-       </span> 
-
-       <div ng-show="!showTimeline">
-       <br><br>
-        <h3><i><b>“Life would be tragic if it weren't funny...”</b></i></h3>
-        <p><b> ― Stephen Hawking ― </b></p>
-        </div>
-      </div>
-
-      <!-- <div class ="col-lg-1"></div> -->
-      <!--       <div class ="col-lg-5">
-        <p class="navbar-right"><b><i>Programming Experience</i></b></p><hr>
-        <nvd3 options="options" data="data" class="with-3d-shadow with-transitions" config="{ 'extended': true }"></nvd3>
-      </div> -->
-   </div>
-   </div>
+<script src="/js/demo-app.js"></script>
+<script src="/js/demo-media-model.js"></script>
+<script src="/js/demo-directive.js"></script>
+<script src="/js/demo-controller.js"></script>
 </body>
 </html>
