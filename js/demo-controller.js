@@ -84,9 +84,9 @@ angular.module('ngTimelineDemoApp')
             },
             'text': {
               'headline': 'Visited JAPAN',
-              'text': "<p>This is one of the best time in my life.. <b>AKIBA!!</b>: visiting Kyushu University" +
-               " EE Lab, hunting ramen noodle from Kyushu to Hokkaido" +
-               ", visiting AKIBA, admiring Shibuya Scramble, etc..</p>",
+              'text': "<p>This is one of the best time in my life: visited Kyushu University" +
+               " EE Lab, hunted ramen noodle from Kyushu to Hokkaido" +
+               ",<b>AKIBA!!</b></p>",
             },
         },
         {
@@ -294,7 +294,7 @@ angular.module('ngTimelineDemoApp')
                     },
                     'text': {
                       'headline': 'Got a Platinum Thropy: FINAL FANTASY® XV',
-                      'text': "<p>NB: <b>I've been waiting for this game for ~10years</b> </p>"
+                      'text': "<p>PS: <b>I've been waiting for this game for ~10years</b> </p>"
                     },
                 },
               {
