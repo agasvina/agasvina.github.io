@@ -39,11 +39,9 @@ angular.module('ngTimeline')
         link: function (scope, element) {
           $log.debug(scope.data);
 
-          // Add directive 'timeline-media' to .tl-media div
           var media = angular.element(element[0].querySelector('.tl-media'));
           media.attr('timeline-media', true);
 
-          // Recompile slide with angular to start directives
           $compile(media)(scope);
         }
       };
@@ -79,7 +77,7 @@ angular.module('ngTimeline')
         optimal_tick_width: 100,            // optimal distance (in pixels) between ticks on axis
         base_class: '',
         //timenav_height: 150,
-        timenav_height_percentage: 50,      // Overrides timenav height as a percentage of the screen
+        timenav_height_percentage: 40,      // Overrides timenav height as a percentage of the screen
         timenav_height_min: 150,            // Minimum timenav height
         marker_height_min: 30,              // Minimum Marker Height
         marker_width_min: 150,              // Minimum Marker Width
@@ -170,7 +168,7 @@ angular.module('ngTimeline')
           //########################################################################## TIMELINE DATA
           TL.Timeline.prototype.setData = function (data) {
             if (tl && data) {
-              $log.debug('Loading timeline data: ', data);
+              // $log.debug('Loading timeline data: ', data);
               $scope.timeline.initialize('ng-timeline', new TL.TimelineConfig(data), options);
             }
           };

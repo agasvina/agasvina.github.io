@@ -4,7 +4,7 @@ angular.module('ngTimelineDemoApp')
   .controller('DemoController', ['$scope', '$timeout', function ($scope, $timeout) {
 
     $scope.options = {
-      debug: true,
+      debug: false,
       timenav_position: 'top',
       language: 'en'
     };
@@ -251,7 +251,7 @@ angular.module('ngTimelineDemoApp')
           },
           {
                 'media': {
-                  'url': 'https://www.youtube.com/watch?v=uVIKkcBef2Q',
+                  'url': 'https://www.youtube.com/watch?v=OQWD5W3fpPM&t=16s',
                   'caption': '',
                   'credit': ''
                 },
@@ -267,7 +267,7 @@ angular.module('ngTimelineDemoApp')
             },
             {
                   'media': {
-                    'url': 'https://www.youtube.com/watch?v=KmgR4JiYmPY',
+                    'url': 'https://www.youtube.com/watch?v=ehjJ614QfeM',
                     'caption': '',
                     'credit': ''
                   },
