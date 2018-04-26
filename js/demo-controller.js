@@ -299,7 +299,7 @@ angular.module('ngTimelineDemoApp')
                 },
               {
                     'media': {
-                      'url': 'img/timeline/timeline-09.jpg',
+                      'url': 'img/timeline/timeline-18.png',
                       'caption': '',
                       'credit': ''
                     },
@@ -309,8 +309,8 @@ angular.module('ngTimelineDemoApp')
                       'day': '26'
                     },
                     'text': {
-                      'headline': "Becoming an EngD student...",
-                      'text': "<p>in the University of St. Andrews <b>again....</b></p>"
+                      'headline': "Becoming a Reseach Engineer in NHS Lothian ...",
+                      'text': "<p>I still have a mixed feeling about this.</p>"
                     },
                 },
                 {
